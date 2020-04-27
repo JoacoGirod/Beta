@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= detalles.name %> </title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <% // imagenfinal fue uno de mis intentos para hacer que funcione la imagen %> 
+    <% var imagenfinal = "/images/" + detalles.image %> 
+    <% var numero=detalles.price %> 
+    <% function toThousands() {
+        numero = numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")
+        return numero
+    }%>
+    ;  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="titulos1">
+        <div class="container1">
+            <img class="logo" src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
+            <div class="wrap">
+                <div class="search">
+                   <input type="text" class="searchTerm" placeholder="What are you looking for?">
+                   <button type="submit" class="searchButton">
+                     <i class="fa fa-search"></i>
+                  </button>
+                </div>
+             </div>
+        </div>
+        
+        <div class="subtitulo">
+            <i class="fas fa-hand-holding-usd"></i>
+            <div class="textoSub"> Comprá en cuotas y sin tarjeta de crédito</div>
+        </div>	
+    
+        </div>
+        <div class="subsubtitulotablet">
+            <div><p class="texto2"> Texto Ofertas    Tiendas   Oficiales   Vender   Ayuda</p></div>
+        
+            <div><p>Creá tu cuenta   <i class="fas fa-id-card"></i>   Ingresá <i class="fas fa-sign-in-alt"></i>   Mis compras    <i class="fas fa-shopping-basket"></i></p></div>
+        </div>
+        
+        <div class="subsubtitulo"><i class="fas fa-align-justify"></i></div>
+    <div class="bodyProductos">
+        <% for( let index = 0; index < 1; index++ ) { %>
+        <p class= "productodetallado">Detalle del producto: <%= detalles.name %> </p>
+        <% } %>
+        
+        <div><% //ACA GONZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                //VOS PODESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+                 %> 
+            <img src= "/images/<%=detalles.image%>"       alt="foto del producto">
+            <p class="descripcion"><%= detalles.description %></p>
+            <p class="epigrafe"><%= detalles.name %> </p>
+            
+            <div class="precioydescuento"><p>$<%=toThousands()  %>  /  %<%= detalles.discount %> OFF </p></div>
+            <div class="preciogrande"><p class="margenloco">$<%=toThousands()  %></p></div>
+          
+            <div class="iconos">
+                <div class="contenedoricono"><i class="fas fa-credit-card lala"></i></div>
+                <div class="contenedoricono"><i class="fas fa-store"></i></div>
+            </div>
+            <div class="textodelicono">
+                <p>Paga en 12 cuotas sin interes</p>
+                <p>Retiro gratis en locales del vendedor</p>
+            </div>
+            <button class="boton"> COMPRAR AHORA </button>
+
+
+        </div>
+        <div>
+            <div class="footer">
+
+                <div class="alfa">
+                    <i class="far fa-credit-card"></i>
+                    <p class="f-texto-destacado">Pagá con tarjeta o en efectivo</p>
+                    <p class="f-texto-normal">Con Mercado Liebre Cash, tenés cuotas sin interés con tarjeta o efectivo en puntos de pago. ¡Y siempre es seguro!</p>	
+                </div>
+                
+                <div class="alfa">
+                    <i class="fas fa-gift"></i>
+                    <p class="f-texto-destacado">Envío gratis desde $ 1.999</p>
+                    <p class="f-texto-normal">Solo por estar registrado en Mercado Liebre tenés envíos gratis en miles de productos. Es un beneficio de Mercado Puntos.</p>
+                </div>
+        
+                <div class="alfa">
+                    <i class="fas fa-user-shield"></i>
+                    <p class="f-texto-destacado">Seguridad, de principio a fin</p>
+                    <p class="f-texto-normal">¿No te gusta? ¡Devolvelo! En Mercado Liebre, no hay nada que no puedas hacer, porque estás siempre protegido.</p>
+                    
+                </div>
+        
+                        
+                
+        
+        
+                <div class="beta">
+                    <p>Copyright © 1999-2019 MercadoLiebre S.R.L.</p>
+                </div>
+        </div>
+
+
+    </div>
+</body>
+</html>

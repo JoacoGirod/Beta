@@ -1,0 +1,251 @@
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container1{
+  display: flex;
+  justify-content: left;
+  background-color: #EAC926;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-left: 4%;
+}
+.logo{
+  width: 40%;
+}
+.subtitulo{
+  background-color: #EAC926;
+  display: flex;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  align-self: center;
+  justify-content: center;
+  
+  
+}
+.watafak{
+  display: flex;
+  justify-content: center;
+  background-color: #EAC926;
+}
+.textoSub{
+  font-family: Roboto;
+  font-size: 20px;
+  text-align: center;
+  margin-left: 0.5%;
+}
+.fa-hand-holding-usd{
+  display: flex;
+  font-size: 24px;
+  width:20px;
+  height:20px
+}
+.subsubtitulotablet{
+  display: none;
+}
+
+.fa-align-justify{
+  background-color: #03264C ;
+  font-size: 24px;
+  padding: 1%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  color: white;
+  border: 1px black solid;
+  text-align: center;
+}
+body{
+  background-color: #ebebeb;
+}
+.subsubtitulo{
+  display: flex;
+  justify-content: center;
+  background-color: #EAC926;
+}
+.bodyProductos{
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3%;
+  margin-left: 2%;
+  margin-left: 2%;
+}
+.productodetallado{
+  display: flex;
+  font-size: 24px;
+  padding: 1%;
+  text-align: left;
+  width: 94%;
+  color: #666666;
+  margin-top: 6%;
+  margin-bottom: 6%;
+  font-weight: 550;
+
+}
+.descripcion{
+  text-align: left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+
+}
+.precioydescuento{
+  display: flex;
+  flex-wrap: wrap;
+  text-align: left;
+  color: rgb(27, 177, 27);
+  font-size: 20px;
+}
+.fa-truck{
+  width:100%;
+}
+.footer{
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: 20%;
+  padding-top: 5%;
+  background-color: white;
+}
+.f-texto-destacado{
+  font-size: 24px;
+  color: #666666;
+}
+.alfa{
+  background-color: white;
+  width: 100%;
+}
+.Producto:last-child{
+  margin-bottom: 30%;
+}
+
+.alfa{
+  background-color: white;
+  width: 100%;
+}
+
+
+
+.beta{
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  border-top: 1px solid #ebebeb;
+}
+.fa-credit-card{
+  font-size: 30px;
+  color: rgb(48, 48, 230);
+}
+.fa-user-shield{
+  font-size: 30px;
+  color: rgb(48, 48, 230);
+}
+.fa-gift{
+  font-size: 30px;
+  color: rgb(48, 48, 230);
+}
+.epigrafe{
+  text-align: left;
+  font-size: 30px;
+  font-weight: 600;
+}
+.preciogrande{
+  font-size: 60px;
+  text-align: left;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.margenloco{
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.iconos{
+  
+  width: 20%;
+  font-size: 25px;
+  display: inline-block;
+  text-align: right;
+  line-height: 2;
+}
+.textodelicono{
+  display: inline-block;
+  
+  width:79%;
+  text-align:left;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 24px;
+}
+.contenedoricono{
+ width: 100%;
+}
+.boton{
+  background-color: rgb(48, 48, 230);
+}
+
+
+
+
+.fa-store{
+  color: rgb(27, 177, 27);
+  margin-left: 5px;
+  line-height: 0;
+}
+.lala{
+  color: rgb(27, 177, 27);
+  margin-left: 5px;
+  line-height: 0;
+}
+.fas{
+  line-height: 0em;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid black;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid gray;
+  background: gray;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 5%;
+  left: 80%;
+  
+  transform: translate(-50%, -50%);
+}
