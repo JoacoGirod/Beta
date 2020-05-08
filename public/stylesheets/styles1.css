@@ -6,6 +6,23 @@
 }
 body{
   margin: 0px;
+  background-color: rgba(212, 212, 212, 0.788);
+}
+.D000{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4%;
+}
+.B000{
+    width: 90%;
+    background-color:rgb(88, 88, 184) ;
+    font-size: 28px;
+    align-self: center;
+    border-radius: 5px;
+    color: white;
+    height: 30%;
+    border: 2px black solid;
 }
 .container1{
     display: flex;
@@ -17,9 +34,6 @@ body{
 }
 .logo{
     width: 40%;
-}
-.L000{
-    font-size: 50px;
 }
 .buscador{
     width: 50%;
@@ -176,6 +190,8 @@ body{
 .alfa{
     background-color: white;
     width: 100%;
+    align-items: center;
+    text-align: center;
 }
 .Producto:last-child{
     margin-bottom: 30%;
@@ -202,6 +218,30 @@ body{
 }
 .subsubtitulotablet{
     display: none;
+}
+.T000{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+.T001{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.C000{
+    background-color: white;
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 3%;
+    margin-top: 3%;
+    
+}
+.C001{
+    margin-bottom: 1%;
+    border-top: 1px gray solid;
+}
+.HL000{
+    margin-right: 3%;
 }
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 

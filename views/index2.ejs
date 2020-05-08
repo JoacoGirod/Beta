@@ -11,11 +11,12 @@
     <% // imagenfinal fue uno de mis intentos para hacer que funcione la imagen %> 
     <% var imagenfinal = "/images/" + detalles.image %> 
     <% var numero=detalles.price %> 
-    <% function toThousands() {
-        numero = numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")
-        return numero
+    <% var precioConDescuento = parseInt((100 - detalles.discount)*detalles.price /100) %> 
+    <% function toThousands(pasameloConPunto) {
+        pasameloConPunto = pasameloConPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")
+        return pasameloConPunto
     }%>
-    ;  
+    
     
     
     
@@ -52,33 +53,51 @@
         </div>
         
         <div class="subsubtitulo"><i class="fas fa-align-justify"></i></div>
-    <div class="bodyProductos">
         <% for( let index = 0; index < 1; index++ ) { %>
         <p class= "productodetallado">Detalle del producto: <%= detalles.name %> </p>
         <% } %>
+    <div class="bodyProductos">
         
-        <div><% //ACA GONZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        
+        <div class="propro"><% //ACA GONZAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                 //VOS PODESSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
                  %> 
-            <img src= "/images/<%=detalles.image%>"       alt="foto del producto">
-            <p class="descripcion"><%= detalles.description %></p>
-            <p class="epigrafe"><%= detalles.name %> </p>
-            
-            <div class="precioydescuento"><p>$<%=toThousands()  %>  /  %<%= detalles.discount %> OFF </p></div>
-            <div class="preciogrande"><p class="margenloco">$<%=toThousands()  %></p></div>
-          
-            <div class="iconos">
-                <div class="contenedoricono"><i class="fas fa-credit-card lala"></i></div>
-                <div class="contenedoricono"><i class="fas fa-store"></i></div>
+            <div class="propro3">
+            <img class="imgqueaparece" src= "/images/<%=detalles.image%>" alt="foto del producto"><p class="descripcion"><%= detalles.description %></p>
             </div>
-            <div class="textodelicono">
-                <p>Paga en 12 cuotas sin interes</p>
-                <p>Retiro gratis en locales del vendedor</p>
-            </div>
-            <button class="boton"> COMPRAR AHORA </button>
+            <div class="propro2">
+                <p class="epigrafe"><%= detalles.name %> </p>
 
+
+                <div class="precioydescuento"><p>$<%=toThousands(numero)  %>  /  %<%= detalles.discount %> OFF </p></div>
+
+
+                <div class="preciogrande"><p class="margenloco">$<%=toThousands(precioConDescuento)  %></p></div>
+
+
+                <div class="contenedoriconoytexto">
+                    <div class="iconos">
+                        <div class="contenedoricono"><i class="fas fa-credit-card lala"></i></div>
+                        <div class="contenedoricono1"><i class="fas fa-store"></i></div>
+                    </div>
+                    <div class="textodelicono">
+                        <p>Paga en 12 cuotas sin interes</p>
+                        <p>Retiro gratis en locales del vendedor</p>
+                    </div>
+                </div>
+                <button class="boton"> COMPRAR AHORA </button>
+            </div>
 
         </div>
+
+
+
+        <a class="HL000" href="/editar/<%= detalles.id %>">Editar Producto</a>
+        <a href="/asesinar/<%= detalles.id %> ">Asesinar Producto</a>
+
+
+
+
         <div>
             <div class="footer">
 

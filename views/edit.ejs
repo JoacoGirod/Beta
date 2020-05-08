@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editing</title>
+    <link rel="stylesheet" href="../stylesheets/styles2.css">
+    
+</head>
+<body>
+<div class="DIV000" ><p class="T000">Hora de editar el producto <%= detalles.name %> </p> 
+    
+    <form action="/editar/<%= detalles.id %>?_method=put" method="POST">
+        <div class="DIV001">
+        <label class="L000" for="">Name</label><br>
+        <input class="I000" type="text" name="name" value="<%= detalles.name %> "><br><br>
+        </div>
+        <div class="DIV001">
+        <label class="L000" for="">Description</label><br>
+        <input class="I000" type="text" name="description" value="<%= detalles.description %> "><br><br>
+        </div>
+        <div class="DIV001">
+        <label class="L000" for="">Price</label><br>
+        <input class="I000" type="text" name="price" value="<%= detalles.price %> "><br><br>
+        </div>
+        <div class="DIV001">
+        <label class="L000" for="">Discount</label><br>
+        <input class="I000" type="text" name="discount" value="<%= detalles.discount %> "><br><br>
+        </div>
+        <div class="DIV001">
+        <label class="L000" for="">Image</label><br>
+        <input class="I000" type="text" name="image" value="<%= detalles.image %> "><br><br>
+        </div>
+        <div class="DIV001">
+        <label class="L000" for="">Category</label><br>
+        <input class="I000" type="text" name="category" value="<%= detalles.category %> "><br><br>
+        </div>
+        <button class="B000" type="submit">Actualizate!</button>
+
+
+    </form>
+</div>
+</body>
+</html>
