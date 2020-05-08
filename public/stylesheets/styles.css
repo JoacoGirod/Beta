@@ -72,9 +72,10 @@ body{
 }
 .producto{
     overflow: hidden;
-    width: 95%;
+    width: 90%;
     background-color: white;
     margin-bottom: 3%;
+    
     
 }
 .imgproducto{
@@ -124,7 +125,7 @@ body{
 }
 .fa-truck{
     position: absolute;
-    
+    font-size: 20px;
     left: 200%;
     top: 1%;
     color: rgb(27, 177, 27);
@@ -286,11 +287,14 @@ body{
     margin-right: 3px;
 }
 .producto{
-    width: 40%;
+    width: 43%;
+   
 
 }
 .bodyProductos{
     justify-content: space-evenly;
+    display: inline-flex;
+
 }
 .logo{
     width: 60%;
@@ -347,7 +351,7 @@ body{
     padding-left: 3%;
 }
 .producto{
-    width: 22%;
+    width: 23%;
 }
 .titulos{
     margin-top: 1%;
