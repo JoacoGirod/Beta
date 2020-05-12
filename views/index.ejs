@@ -14,6 +14,21 @@
 <body>
 
 
+	 
+    <% function descontamelo(producto){
+		var lala = parseInt((100 - producto["discount"])*producto["price"] /100)
+		return lala
+		} %> 
+    <% function toThousands(pasameloConPunto) {
+        pasameloConPunto = pasameloConPunto.toString().replace(/\B(?=(\d{3})+(?!\d))/g,".")
+        return pasameloConPunto
+    }%>
+
+
+
+
+
+
 	<div class="titulos1">
 	<div class="container1">
 		<img class="logo" src="/images/logo-mercado-liebre.svg" alt="Logo Mercado Liebre">
@@ -47,12 +62,25 @@
 	<div class="titulos">Basado en tus ultimas visita</div>
 		
 			<% for( let index = 0; index < detalles.length; index++ ) { %>
+				<% 
+					var preciocondescuento = descontamelo(detalles[index])
+					var preciocondescuentoypunto= toThousands(preciocondescuento)
+					
+				%> 
+
+
+
+
+
 				<div class="producto">
 					<a href="/product/details/<%= detalles[index].id %> /category"><img class="imgproducto" src="/images/<%= detalles[index].image %> " alt=""></a>
 					<div class="imgdelivery"><i class="fas fa-truck"></i></div>
 					<div class="bajotitulo"></div>
-					<p class="textoprod"><%= detalles[index].price %>$ </p>
-					<p class="descuento"><%= detalles[index].discount %>% OFF </p>
+					
+					<p class="textoprod"><%= preciocondescuentoypunto %>$ </p>
+					<% if (detalles[index].discount != 0) { %>
+					 <p class="descuento"><%= detalles[index].discount %>% OFF </p>
+					<% } %>
 				</div>
 				
 			<% } %>
@@ -67,7 +95,7 @@
 			<a href="/product/details/<%= detalles[index].id %> /category"><img class="imgproducto" src="/images/<%= detalles[index].image %> " alt=""></a>
 			<div class="imgdelivery"><i class="fas fa-truck"></i></div>
 			<div class="bajotitulo"></div>
-			<p class="textoprod"><%= detalles[index].price %>$ </p>
+			<p class="textoprod"><%= descontamelo(detalles[index]) %>$ </p>
 			<p class="descuento"><%= detalles[index].discount %>% OFF </p>
 		</div>
 		
