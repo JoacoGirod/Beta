@@ -85,10 +85,10 @@ body{
     
 }
 .textoprod{
-    
+    padding-top: 1%;
     font-size: 24px;
     display: inline;
-    text-align: left;
+    text-align: center;
     margin-left: 1%;
 }
 .titulos{
@@ -288,6 +288,7 @@ body{
 }
 .producto{
     width: 43%;
+    padding: 2%;
    
 
 }
@@ -351,7 +352,7 @@ body{
     padding-left: 3%;
 }
 .producto{
-    width: 23%;
+    width: 20%;
 }
 .titulos{
     margin-top: 1%;
