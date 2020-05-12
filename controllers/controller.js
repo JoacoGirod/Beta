@@ -53,13 +53,14 @@ let controller = {
                     detalles[idProductoCorrecto]=productoQueSeQuiereEditar
                     detallesEnJsonDeNuevo=JSON.stringify(detalles)
                     fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",detallesEnJsonDeNuevo)
-                    return res.redirect("/")
+                    
 
                 }
                 
             }
            
         }
+        return res.redirect("/")
     },
 
     definetelykill: function(req,res){
@@ -75,7 +76,7 @@ let controller = {
             }
             
         }
-        detallesEnJsonConUnEliminado=JSON.stringify(arrayConLosProductosQueNoDebianSerEliminados)
+        detallesEnJsonConUnEliminado=JSON.stringify(arrayConLosProductosQueNoDebianSerEliminados, null, " ")
         fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",detallesEnJsonConUnEliminado)
         res.redirect("/")
         
