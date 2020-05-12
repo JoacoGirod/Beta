@@ -55,6 +55,7 @@ let controller = {
                     fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",detallesEnJsonDeNuevo)
                     
 
+                    
                 }
                 
             }
