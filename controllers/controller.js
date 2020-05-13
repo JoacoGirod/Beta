@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const fs = require("fs")
-const detalles = JSON.parse(fs.readFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json", 'utf-8'))
+const detalles = JSON.parse(fs.readFileSync(process.cwd() + "/dataBase.json", 'utf-8'))
 
 
 let controller = {
@@ -52,7 +52,7 @@ let controller = {
                     productoQueSeQuiereEditar[propiedadesDelArray[j]]=datosEditadosPorElAdministrador[propiedadesDeLoQueSeQuiereEditar[i]]
                     detalles[idProductoCorrecto]=productoQueSeQuiereEditar
                     detallesEnJsonDeNuevo=JSON.stringify(detalles)
-                    fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",detallesEnJsonDeNuevo)
+                    fs.writeFileSync(process.cwd() + "/dataBase.json",detallesEnJsonDeNuevo)
                     
 
                     
@@ -78,7 +78,7 @@ let controller = {
             
         }
         detallesEnJsonConUnEliminado=JSON.stringify(arrayConLosProductosQueNoDebianSerEliminados, null, " ")
-        fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",detallesEnJsonConUnEliminado)
+        fs.writeFileSync(process.cwd() + "/dataBase.json",detallesEnJsonConUnEliminado)
         res.redirect("/")
         
     },
@@ -112,7 +112,7 @@ let controller = {
         }
         detalles.push(nuevoProducto1)
         lala = JSON.stringify(detalles)
-        fs.writeFileSync("/Users/joaqu/Desktop/DIGITAL HOUSE/PracticaEjs/App/productsDataBase.json",lala)
+        fs.writeFileSync(process.cwd() + "/dataBase.json",lala)
         res.redirect("/")
     }
 }
