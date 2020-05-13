@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var controller = require("../controllers/usercontroller")
+var controller = require("../controllers/controller")
 /* GET users listing. */
 router.get("/new", controller.newUser)
 router.get('/', function(req, res, next) {
